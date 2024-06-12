@@ -1,0 +1,345 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#myVideo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+}
+
+#logo {
+    margin-left: 20px;
+    height: 80px;
+}
+
+header {
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(255, 255, 255, 0));
+    text-align: center;
+    padding: 2px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#navButton {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#navButton:hover {
+    color: #4CAF50;
+}
+
+.containerNavMenu {
+    background-color: rgba(9, 57, 23, 0.5);
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    right: 13px;
+    top: 27px;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #4CAF50;
+}
+
+.container {
+    margin-top: 150px;
+    text-align: center;
+    background-color: rgba(9, 57, 23, 0.5);
+    padding: 20px;
+    padding-bottom: 0px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/plain-black-background-02fh7564l8qq4m6d.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(100px);
+    z-index: -1;
+}
+
+h1, p {
+    color: #4CAF50;
+}
+
+form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+#dropZone {
+    width: 100%;
+    height: 200px;
+    border: 2px dashed #4CAF50;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    color: #4CAF50;
+    cursor: pointer;
+}
+
+#previewImage {
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    margin-top: 10px;
+    padding: 10px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #333;
+}
+
+.menu {
+    margin-right: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.containerNavMenu {
+    background-color: rgba(9, 57, 23, 0.5);
+    padding-right:16px;
+    padding-left:20px;
+    padding-top: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Ensure blur doesn't overflow */
+    position: fixed;
+    right: 12px;
+    top: 32px;
+    z-index: -1;
+   
+}
+.main-body {
+    /* Set to auto or remove the height property */
+    height: auto;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    background-color: rgba(6, 6, 6, 0.193);
+    border-radius: 20px;
+    padding: 5px 10px;
+    width: 30vw;
+    backdrop-filter: blur(30px);
+    position:fixed;
+    top: 25vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+
+}
+/* Style for the search input */
+.search-container input[type="text"] {
+    border: none;
+    background: none;
+    outline: none;
+    color: rgb(219, 217, 217);
+    
+    flex: 1; /* Take remaining space */
+    padding: 8px;
+    
+}
+
+/* Style for the search input */
+.search-container input[type="text"]::placeholder {
+    color: rgb(187, 187, 187); /* Adjust opacity as needed */
+}
+
+/* Style for the search button */
+.search-container button {
+    background: none;
+    border: none;
+    color: rgb(171, 171, 171);
+    cursor: pointer;
+    font-size: 16px;
+    padding-top:0px;
+    padding-right: 5px;
+    padding-bottom:8px;
+   
+}
+.SearchIcon {
+    width: 30px; /* Adjust size as needed */
+    height: 30px; /* Adjust size as needed */
+    vertical-align: middle; /* Align the icon vertically within the button */
+    margin-right: 5px;
+     /* Add spacing between the icon and text */
+}
+.active {
+    color: lightgreen;
+}
+.nav-link{
+    color:white;
+    
+}
+.nav-link:hover
+{
+    color: white;
+
+}
+.nav-link:focus
+{
+    color: lightgreen;
+    
+
+}
+
+
+.generated-text {
+    background-color: rgba(6, 6, 6, 0.193);
+    border-radius: 20px;
+    padding: 20px;
+    padding-left: 40px;
+    width: 60vw; /* Adjust width as needed */
+    max-width: 800px; /* Limit maximum width */
+    backdrop-filter: blur(30px);
+    position: fixed;
+    top: 62vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+    color: rgb(219, 217, 217); /* Text color */
+    overflow-y: auto; /* Enable scrolling if content overflows */
+    max-height: 60vh; /* Limit maximum height and enable scrolling */
+}
+
+.generated-text p {
+    margin-bottom: 10px; /* Bottom margin for paragraphs */
+    line-height: 1.6; /* Line height for readability */
+}
+
+.generated-text h2,h1 {
+    margin-bottom: 15px; /* Bottom margin for headings */
+    color: aliceblue;
+}
+
+.generated-text a {
+    color: lightgreen; /* Link color */
+}
+
+/* Scrollbar style */
+.generated-text::-webkit-scrollbar {
+    width: 8px;
+    border-radius:10px ;
+}
+
+.generated-text::-webkit-scrollbar-thumb {
+    background-color: rgba(171, 171, 171, 0.5); /* Scrollbar thumb color */
+    border-radius: 4px;
+}
+
+.generated-text::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0.1); /* Scrollbar track color */
+}
+
+@media only screen and (max-width: 600px) {
+    header {
+        padding: 10px 0;
+    }
+
+    #navButton {
+        font-size: 20px;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+    }
+    
+    .container {
+        width: 80%;
+        height: 50%;
+        margin-top: 50%;
+    }
+
+    .search-container{
+        margin-top: 100px;
+        min-width: 300px;
+        top:13vh;
+    }
+    .generated-text {
+        top: 60vh;
+        min-width: 400px;
+        min-height: 600px;
+    }
+
+}
